@@ -1,16 +1,10 @@
-$("document").ready(function() {
-	$(".theTarget").skippr();
-});
+$(function() {
 
-$(".theTarget").skippr({
-	transition : 'fade',
-	speed : 1000,
-	easing : 'easeOutQuart',
-	navType : 'block',
-	childrenElementType : 'div',
-	arrows : true,
-	autoPlay : true,
-	autoPlayDuration : 5000,
-	keyboardOnAlways : true,
-	hidePrevious : false
+	$('#back a').on('click',function(){
+		$('body, html').animate({
+			scrollTop:0
+		},800);
+		return false;
+	});
+
 });
